@@ -1,4 +1,5 @@
 $(document).ready(function () {
+// An event handler is the code responsible for managing an event, for listening out for the event trigger, and responding appropriately.
     $("#stream1_btn").on("click", function () { //run that jQuery code as soon as someone clicks on the ID "stream1_btn"
 //  $("#stream1_btn").click(function () // different way to execute a code 
 //  $("#stream1_btn").mouseenter(function () // different way
