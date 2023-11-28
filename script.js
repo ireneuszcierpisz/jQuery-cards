@@ -33,4 +33,12 @@ $(document).ready(function () {
         $(".stream3").removeClass('highlight_stream');
         $(".stream3").addClass('highlight_stream');
     });
+
+    $(".bottom_button").mouseenter(function () {
+        $(".bottom_button").fadeTo(1000, 0.5);
+    }).mouseleave(function () { $(".bottom_button").fadeTo(1000, 1); });
+    // $(".bottom_button").mouseleave(function () { $(".bottom_button").fadeTo(1000, 1); });
+
+    $("p").css("color", "blue").slideUp(2000).slideDown(1000);
+    $("#a1").attr("href", "https://ireneuszcierpisz.github.io/go-business/");
 }); 
