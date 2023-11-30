@@ -35,10 +35,27 @@ $(document).ready(function () {
     });
 
     $(".bottom_button").mouseenter(function () {
-        $(".bottom_button").fadeTo(1000, 0.5);
-    }).mouseleave(function () { $(".bottom_button").fadeTo(1000, 1); });
+        $(this).fadeTo(1000, 0.5);
+    }).mouseleave(function () { $(this).fadeTo(1000, 1); });
     // $(".bottom_button").mouseleave(function () { $(".bottom_button").fadeTo(1000, 1); });
 
     $("p").css("color", "blue").slideUp(2000).slideDown(1000);
     $("#a1").attr("href", "https://ireneuszcierpisz.github.io/go-business/");
+
+    $("p").click(function () {
+        $(this).slideToggle("slow"); /*this p content will disappear if user clicks on it*/
+    });
+
+
+    // when user clicks on the element with card class 
+    $(".card").on("click", function () {   //<div class="card stream3">
+        var classNames = $(this).attr("class").split(" ");  // [card, stream3]
+        if ($(this).css("background-color") == "#fff") {
+            $("." + classNames[1]).css("background-color", "#000");
+        } else {
+            $("." + classNames[0]).css("background-color", "#000");
+            $("." + classNames[1]).css("background-color", "#fff");
+        }
+
+    });
 }); 
